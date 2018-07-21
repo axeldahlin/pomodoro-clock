@@ -1,0 +1,5 @@
+html {
+    box-sizing: border-box;
+  background: url('https://cdn.pixabay.com/photo/2015/03/06/15/00/mountain-garden-661831_960_720.jpg') fixed;
+  background-size: cover;
+}
