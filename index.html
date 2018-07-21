@@ -2,13 +2,24 @@
 <html>
   <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Random JS fact generator</title>
-    <link rel="stylesheet" href="_mormalize.css">
+    <title>Pomodoro Clock</title>
+    <link rel="stylesheet" href="_normalize.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-  
+    <div class="controls">
+      <button data-time="25" class="timer-button">Pomodoro: 25 min</button>
+      <button data-time="5" class="timer-button">Short break: 5 min</button>
+      <button data-time="15" class="timer-button">Long break: 15 min</button>
+      <button class="quit-button">Quit this count down</button>
     </div>
+
+    <div class="display">
+        <h1 class="display-time-left"></h1>
+        <p class="display-pomodoro-count"></p>
+    </div>
+  
+   
     <script src="app.js"></script>
   </body>
 </html>
