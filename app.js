@@ -1,6 +1,7 @@
 const buttons = document.querySelectorAll('.timer-button');
 const displayTime = document.querySelector('.display-time-left');
 const quitButton = document.querySelector('.quit-button');
+const resetButton = document.querySelector('.reset-button');
 const alarmSound = document.querySelector('.audio');
 const displayPomodoros = document.querySelector('.display-pomodoro-count');
 
@@ -23,9 +24,6 @@ function handleTimers() {
   } else {
     itsAPomodoro = false;
   }
-
- 
-
   isCounting = true;
   const seconds = parseInt(this.dataset.time);
   const now = Date.now();
@@ -36,7 +34,6 @@ function handleTimers() {
     if (secondsLeft < 0) {
       if (itsAPomodoro) {
         handleDonePomodoro();
-        
       }
       alarmSound.play();
       isCounting = false;
@@ -46,24 +43,21 @@ function handleTimers() {
       }
       return;
     }
-    
     displayTimeLeft(secondsLeft);
   }, 1000);
 }
 
 
 function handleDonePomodoro() {
-        console.log('now');
         pomodoroCount ++;
         displayPomodoros.textContent = `Pomodoros done: ${pomodoroCount}`;
         itsAPomodoro = false;
         localStorage.setItem("pomodoros", pomodoroCount.toString());
 }
 
-function displayTimeLeft(secsLeft) {
+function displayTimeLeft(secsLeft) {e: 4
   const minutes = Math.floor(secsLeft / 60);
   const seconds = secsLeft % 60
-  console.log({minutes, seconds});
   const display = `${minutes > 10 ? '' : '0'}${minutes}:${seconds > 10 ? '' : '0'}${seconds}`;
   displayTime.textContent = display;
 }
@@ -71,6 +65,15 @@ function displayTimeLeft(secsLeft) {
 
 
 buttons.forEach(button => button.addEventListener('click', handleTimers));
+
+resetButton.addEventListener('click', () => {
+  if (confirm('Reset pomodoro count?')) {
+    localStorage.removeItem("pomodoros");
+    pomodoroCount = 0;
+  }
+  displayPomodoros.textContent = `Pomodoros done: ${pomodoroCount}`;
+});
+
 quitButton.addEventListener('click', () => {
   if (!isCounting) return;
   if (confirm('Are you sure you want quit this countdown?')) {

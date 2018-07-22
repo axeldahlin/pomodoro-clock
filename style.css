@@ -33,6 +33,11 @@ body {
     border-bottom: 3px #fff solid;
     font-size: 1em;
     padding: 10px 10px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    color: yellow;
 }
 
 /* ------------------ BODY ------------------ */
