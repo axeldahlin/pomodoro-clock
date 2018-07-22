@@ -1,7 +1,7 @@
 /* ------------------ GENEREAL ------------------ */
 html {
     box-sizing: border-box;
-    background: radial-gradient(circle, rgb(0, 0, 0), rgba(0,0,0,0)),
+    background: radial-gradient(circle, rgb(0, 0, 0, 0.6), rgba(0,0,0,0)),
     url('https://cdn.pixabay.com/photo/2015/03/06/15/00/mountain-garden-661831_960_720.jpg') fixed;
     background-size: cover;
     color: #fff;
@@ -31,8 +31,7 @@ body {
     border: none;
     border-right: 3px #fff solid;
     border-bottom: 3px #fff solid;
-    font-size: 2em;
-
+    font-size: 1em;
     padding: 10px 10px;
 }
 
@@ -45,13 +44,14 @@ body {
 }
 
 .display-time-left {
-    font-size: 15em;
-    /* text-shadow: 17px 10px 5px rgb(0,0,0, .8); */
+    font-size: 5em;
+    text-align: center;
+  
 }
 
 .display-pomodoro-count {
     text-align: center;
-    font-size: 5em;
-    /* text-shadow: 6px 5px 5px rgb(0,0,0, .8); */
+    font-size: 3em;
+    
 }
 

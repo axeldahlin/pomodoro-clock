@@ -8,18 +8,18 @@
   </head>
   <body>
     <div class="controls">
-      <button data-time="25" class="timer-button">Pomodoro: 25 min</button>
-      <button data-time="5" class="timer-button">Short break: 5 min</button>
-      <button data-time="15" class="timer-button">Long break: 15 min</button>
+      <button data-time="5" class="timer-button">Pomodoro: 25 min</button>
+      <button data-time="7" class="timer-button">Short break: 5 min</button>
+      <button data-time="900" class="timer-button">Long break: 15 min</button>
       <button class="quit-button">Quit this count down</button>
     </div>
 
     <div class="display">
-        <h1 class="display-time-left"></h1>
+        <h1 class="display-time-left">00:00</h1>
         <p class="display-pomodoro-count"></p>
     </div>
   
-   
+    <audio class="audio "src="sound/alarm.mp3"></audio>
     <script src="app.js"></script>
   </body>
 </html>
